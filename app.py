@@ -134,7 +134,7 @@ if uploaded_file is not None:
 # Display confusion matrix (optional)
 if st.button("Show Confusion Matrix"):
     st.write("**Confusion Matrix for Validation Set:**")
-    val_dir = 'detection/data/val'
+    val_dir = 'data/val'
     val_datagen = ImageDataGenerator(rescale=1./255)
     val_generator = val_datagen.flow_from_directory(
         val_dir, target_size=(150, 150), batch_size=32, class_mode='categorical', shuffle=False
