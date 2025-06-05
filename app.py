@@ -25,60 +25,105 @@ CLASS_NAMES = sorted([
 
 # Define solutions for each disease class
 SOLUTIONS = {
-    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": (
-        "Solution: This viral disease is transmitted by whiteflies (Bemisia tabaci). "
-        "Use systemic insecticides such as Imidacloprid or Thiamethoxam as soil drench or foliar spray to control whitefly populations. "
-        "Remove and destroy infected plants promptly to reduce virus reservoirs. Maintain weed control and use reflective mulches to deter whiteflies. "
-        "Ensure proper field sanitation and crop rotation to reduce vector habitats."
-    ),
-    "Tomato___Tomato_mosaic_virus": (
-        "Solution: This virus spreads mechanically through contaminated tools and aphids. "
-        "Disinfect tools regularly with 10% bleach or 70% alcohol solution. "
-        "Control aphids using insecticides like Acephate or Spinosad. "
-        "Remove infected plants immediately and practice crop rotation. Use virus-resistant tomato varieties if available."
-    ),
-    "Tomato___Target_Spot": (
-        "Solution: Caused by Corynespora cassiicola, a fungal pathogen. "
-        "Apply broad-spectrum fungicides such as Chlorothalonil or Mancozeb at recommended rates every 7–10 days. "
-        "Remove infected leaves and plant debris to reduce inoculum. Ensure good airflow by proper plant spacing and pruning. Avoid overhead irrigation to reduce leaf wetness duration."
-    ),
-    "Tomato___Spider_mites Two-spotted_spider_mite": (
-        "Solution: Spider mites (Tetranychus urticae) thrive in hot, dry conditions. "
-        "Apply miticides like Abamectin or Spiromesifen as per label instructions. "
-        "Incorporate insecticidal soaps or horticultural oils for mild infestations. "
-        "Increase humidity around plants and encourage natural predators like Phytoseiulus persimilis. Rotate miticides to prevent resistance."
-    ),
-    "Tomato___Septoria_leaf_spot": (
-        "Solution: Caused by Septoria lycopersici fungus. "
-        "Use fungicides containing Chlorothalonil or Copper oxychloride early in the season and repeat applications every 7–14 days during favorable conditions. "
-        "Remove and destroy infected leaves and crop residues. Practice crop rotation and avoid overhead irrigation. Maintain plant vigor through balanced fertilization."
-    ),
-    "Tomato___Leaf_Mold": (
-        "Solution: Caused by Passalora fulva fungus, favored by high humidity. "
-        "Apply fungicides such as Copper-based compounds or Mancozeb preventatively. "
-        "Increase ventilation in greenhouses or field plantings by pruning and proper spacing. "
-        "Avoid excessive nitrogen fertilization that promotes dense foliage. Remove infected leaves promptly."
-    ),
-    "Tomato___Late_blight": (
-        "Solution: Caused by Phytophthora infestans, a devastating oomycete pathogen. "
-        "Use fungicides containing Metalaxyl-M (Mefenoxam) or Chlorothalonil as preventive and curative sprays. "
-        "Begin treatments at first sign of disease or during favorable wet conditions, applying every 5–7 days. "
-        "Remove and destroy infected plant material. Avoid overhead irrigation and improve air circulation."
-    ),
-    "Tomato___healthy": (
-        "Solution: No disease detected. Continue with best management practices: balanced irrigation, fertilization, pest scouting, and maintaining plant health. "
-        "Use disease-resistant varieties and rotate crops to reduce disease buildup."
-    ),
-    "Tomato___Early_blight": (
-        "Solution: Caused by Alternaria solani fungus. "
-        "Apply fungicides like Chlorothalonil, Mancozeb, or Azoxystrobin every 7–10 days starting at early fruit set. "
-        "Remove and destroy infected plant debris. Avoid overhead irrigation and ensure good airflow by proper spacing and pruning."
-    ),
-    "Tomato___Bacterial_spot": (
-        "Solution: Caused by Xanthomonas campestris pv. vesicatoria. "
-        "Apply copper-based bactericides such as Copper hydroxide or Copper oxychloride every 7–10 days. "
-        "Remove infected plant material and avoid working in wet fields to prevent spread. Use certified disease-free seed and resistant varieties when available. Avoid overhead irrigation to minimize leaf wetness."
-    )
+    "English": {
+        "Tomato___Early_blight": "Cause: Alternaria solani fungus.\n"
+            "Use Chlorothalonil (2 g/L), Mancozeb (2.5 g/L), or Azoxystrobin (1 ml/L) at 7–10 day intervals. "
+            "Remove and destroy infected leaves. Avoid overhead irrigation. Maintain good spacing and rotate crops.",
+
+        "Tomato___Late_blight": "Cause: Phytophthora infestans (oomycete).\n"
+            "Spray Metalaxyl-M (0.35 g/L) or Chlorothalonil (2 g/L) every 5–7 days. Remove infected plants. "
+            "Avoid wetting leaves, and use resistant tomato varieties.",
+
+        "Tomato___Bacterial_spot": "Cause: Xanthomonas bacteria.\n"
+            "Use Copper hydroxide (2.5 g/L) or Copper oxychloride (3 g/L) every 7–10 days. "
+            "Avoid working on wet plants. Use certified disease-free seeds and maintain field hygiene.",
+
+        "Tomato___Leaf_Mold": "Cause: Passalora fulva fungus.\n"
+            "Spray Mancozeb (2.5 g/L) or Copper fungicides preventively. Improve ventilation. "
+            "Avoid excessive nitrogen, and remove affected leaves promptly.",
+
+        "Tomato___Septoria_leaf_spot": "Cause: Septoria lycopersici.\n"
+            "Apply Chlorothalonil (2 g/L) or Copper oxychloride (2.5 g/L) every 10 days. "
+            "Remove infected leaves. Avoid overhead watering. Rotate crops and sanitize tools.",
+
+        "Tomato___Spider_mites Two-spotted_spider_mite": "Cause: Tetranychus urticae mites.\n"
+            "Use Abamectin (0.5 ml/L) or Spiromesifen (1 ml/L). Maintain humidity. Encourage natural predators like Phytoseiulus persimilis.",
+
+        "Tomato___Target_Spot": "Cause: Corynespora cassiicola.\n"
+            "Use Chlorothalonil or Mancozeb every 7–10 days. Improve air circulation. Remove infected plant debris.",
+
+        "Tomato___Tomato_mosaic_virus": "Cause: Transmitted via aphids and contaminated tools.\n"
+            "Disinfect tools with 10% bleach, control aphids using Imidacloprid (0.5 ml/L), and remove infected plants.",
+
+        "Tomato___Tomato_Yellow_Leaf_Curl_Virus": "Cause: Whiteflies (Bemisia tabaci).\n"
+            "Use Imidacloprid (0.5 ml/L) or Thiamethoxam. Install yellow sticky traps and remove infected plants.",
+
+        "Tomato___healthy": "No disease detected.\n"
+            "Maintain regular inspection, use disease-free seeds, and apply balanced fertilizer and irrigation practices."
+    },
+    "Hindi": {
+        "Tomato___Early_blight": "कारण: Alternaria solani फफूंद।\n"
+            "Chlorothalonil (2 ग्राम/लीटर), Mancozeb (2.5 ग्राम/लीटर) या Azoxystrobin (1 मिली/लीटर) का छिड़काव करें। "
+            "संक्रमित पत्तों को हटाएं, अधिक पानी से बचें, और पौधों के बीच दूरी बनाए रखें।",
+
+        "Tomato___Late_blight": "कारण: Phytophthora infestans।\n"
+            "Metalaxyl-M (0.35 ग्राम/लीटर) या Chlorothalonil का 5–7 दिन के अंतराल पर छिड़काव करें। "
+            "संक्रमित पौधों को हटाएं और पत्तों को गीला न करें।",
+
+        "Tomato___Bacterial_spot": "कारण: Xanthomonas बैक्टीरिया।\n"
+            "Copper hydroxide या Copper oxychloride का छिड़काव करें। प्रमाणित बीजों का उपयोग करें और खेत की स्वच्छता बनाए रखें।",
+
+        "Tomato___Leaf_Mold": "कारण: Passalora fulva फफूंद।\n"
+            "Mancozeb या Copper आधारित कवकनाशी का उपयोग करें। हवादार वातावरण बनाए रखें और संक्रमित पत्तियों को हटाएं।",
+
+        "Tomato___Septoria_leaf_spot": "कारण: Septoria lycopersici फफूंद।\n"
+            "Chlorothalonil या Copper oxychloride का 10 दिन के अंतराल पर छिड़काव करें। संक्रमित पत्तियों को हटाएं।",
+
+        "Tomato___Spider_mites Two-spotted_spider_mite": "कारण: Tetranychus urticae माइट्स।\n"
+            "Abamectin या Spiromesifen का उपयोग करें। नमी बनाए रखें और जैविक शिकारियों का उपयोग करें।",
+
+        "Tomato___Target_Spot": "कारण: Corynespora cassiicola।\n"
+            "Chlorothalonil या Mancozeb का नियमित छिड़काव करें और संक्रमित पौधों को हटा दें।",
+
+        "Tomato___Tomato_mosaic_virus": "कारण: एफिड और संक्रमित उपकरणों से फैलता है।\n"
+            "उपकरणों को कीटाणुरहित करें, एफिड को नियंत्रित करें और संक्रमित पौधों को हटा दें।",
+
+        "Tomato___Tomato_Yellow_Leaf_Curl_Virus": "कारण: सफेद मक्खियां।\n"
+            "Imidacloprid या Thiamethoxam का प्रयोग करें। पीले स्टिकी ट्रैप लगाएं।",
+
+        "Tomato___healthy": "कोई बीमारी नहीं है। नियमित निगरानी करें और अच्छे खेती के तरीके अपनाएं।"
+    },
+    "Marathi": {
+        "Tomato___Early_blight": "कारण: Alternaria solani नावाची बुरशी.\n"
+            "Chlorothalonil (2 ग्रॅम/लिटर), Mancozeb (2.5 ग्रॅम/लिटर), किंवा Azoxystrobin (1 मिली/लिटर) फवारणी करा. "
+            "संक्रमित पाने काढा. योग्य अंतर ठेवा.",
+
+        "Tomato___Late_blight": "कारण: Phytophthora infestans नावाचा ओमायसिट.\n"
+            "Metalaxyl-M किंवा Chlorothalonil दर 5–7 दिवसांनी फवारणी करा. संक्रमित झाडे काढून टाका.",
+
+        "Tomato___Bacterial_spot": "कारण: Xanthomonas बॅक्टेरिया.\n"
+            "Copper hydroxide किंवा Copper oxychloride वापरा. अधिक ओलावा टाळा.",
+
+        "Tomato___Leaf_Mold": "कारण: Passalora fulva फंगस.\n"
+            "Mancozeb किंवा Copper आधारित फंगिसाइड वापरा. हवा खेळती ठेवा.",
+
+        "Tomato___Septoria_leaf_spot": "कारण: Septoria lycopersici.\n"
+            "Chlorothalonil किंवा Copper oxychloride वापरून फवारणी करा. संक्रमित पानं हटवा.",
+
+        "Tomato___Spider_mites Two-spotted_spider_mite": "कारण: Tetranychus urticae कोळ्यांमुळे होणारा रोग.\n"
+            "Abamectin किंवा Spiromesifen फवारणी करा. नमी ठेवा.",
+
+        "Tomato___Target_Spot": "कारण: Corynespora cassiicola बुरशी.\n"
+            "Chlorothalonil किंवा Mancozeb वापरा. झाडांमधील जागा मोकळी ठेवा.",
+
+        "Tomato___Tomato_mosaic_virus": "कारण: उपकरणे आणि एफिड द्वारे पसरतो.\n"
+            "साफसफाई ठेवा. एफिड नियंत्रण करा.",
+
+        "Tomato___Tomato_Yellow_Leaf_Curl_Virus": "कारण: पांढऱ्या माश्यांमुळे विषाणूचा प्रादुर्भाव.\n"
+            "Imidacloprid किंवा Thiamethoxam वापरा. पीळ ट्रॅप्स लावा.",
+
+        "Tomato___healthy": "रोग सापडला नाही. नियमित तपासणी करा. योग्य पाणी आणि खत द्या."
+    }
 }
 
 @st.cache_resource
@@ -98,6 +143,7 @@ def predict_image(image):
 
 # UI Layout
 st.title("Plant Disease Detection")
+language = st.selectbox("Choose Language / भाषा निवडा / भाषा चुनें", ["English", "Hindi", "Marathi"])
 st.write("Upload a leaf image, and the model will predict the disease class.")
 
 # File uploader
@@ -126,9 +172,8 @@ if uploaded_file is not None:
 
     # Add Solution Button
     if st.button("Show Solution"):
-        # Display the solution for the predicted class
-        solution = SOLUTIONS.get(predicted_class, "Solution not available for this class.")
-        st.write(f"**Solution for {predicted_class}:**")
+        solution = SOLUTIONS[language].get(predicted_class, "No solution available in selected language.")
+        st.write(f"### Solution in {language}:")
         st.info(solution)
 
 # Display confusion matrix (optional)
