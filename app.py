@@ -6,7 +6,10 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
+from gtts import gTTS
 from sklearn.metrics import confusion_matrix
+from tempfile import NamedTemporaryFile
+from io import BytesIO 
 
 # Paths and configuration
 MODEL_PATH = "model.h5"  # Path to your saved model
@@ -126,6 +129,19 @@ SOLUTIONS = {
     }
 }
 
+lang_codes = {"English": "en", "Hindi": "hi", "Marathi": "mr"}
+
+def generate_audio_bytes(text, lang):
+    # Fallback Marathi audio to Hindi if needed
+    if lang == "mr":
+        lang = "hi"
+    tts = gTTS(text=text, lang=lang)
+    audio_bytes = BytesIO()
+    tts.write_to_fp(audio_bytes)
+    audio_bytes.seek(0)
+    return audio_bytes
+
+
 @st.cache_resource
 def load_trained_model():
     model = load_model(MODEL_PATH)
@@ -148,7 +164,7 @@ st.write("Upload a leaf image, and the model will predict the disease class.")
 
 # File uploader
 uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])
-if uploaded_file is not None:
+if uploaded_file:
     # Display uploaded image
     image = load_img(uploaded_file, target_size=(150, 150))
     st.image(image, caption="Uploaded Image", use_column_width=True)
@@ -171,10 +187,15 @@ if uploaded_file is not None:
     st.pyplot(fig)
 
     # Add Solution Button
-    if st.button("Show Solution"):
+    if st.button("Show Solution and Play Audio"):
         solution = SOLUTIONS[language].get(predicted_class, "No solution available in selected language.")
         st.write(f"### Solution in {language}:")
         st.info(solution)
+        try:
+            audio_bytes = generate_audio_bytes(solution, lang_codes[language])
+            st.audio(audio_bytes, format="audio/mp3")
+        except Exception as e:
+            st.error(f"Audio generation failed: {e}")
 
 # Display confusion matrix (optional)
 if st.button("Show Confusion Matrix"):
